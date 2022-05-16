@@ -151,7 +151,7 @@ class _CalendarPage extends StatelessWidget {
 
   DateTime _getFirstDay(DateTime dateTime) {
     final firstDayOfTheMonth = DateTime(dateTime.year, dateTime.month, 1);
-    return firstDayOfTheMonth.add(firstDayOfTheMonth.weekday.daysDuration);
+    return firstDayOfTheMonth.add((firstDayOfTheMonth.weekday - 1).daysDuration);
   }
 
   @override
